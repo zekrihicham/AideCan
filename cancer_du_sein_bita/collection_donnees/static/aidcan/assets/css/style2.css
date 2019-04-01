@@ -1,0 +1,156 @@
+div#mamo.container{
+  margin-top:130px;
+}
+
+div.mamo-img{
+  border:solid 0.5px gray;
+  padding:50px;
+  min-width:600px;
+  min-height:600px;
+  margin-left:150px;
+  margin-right:120px;
+  border-radius:20px;
+}
+
+div.mamo-col.col-md-12{
+  padding:50px;
+  display: none;
+}
+
+div.form-group{
+}
+
+.slider{
+  -webkit-appearance:none;
+  width:100%;
+  height:15px;
+  border-radius:5px;
+  background:#d3d3d3;
+  outline:none;
+  opacity:0.7;
+  -webkit-transition:.2s;
+  transition:opacity .2s;
+}
+
+.slider:hover{
+  opacity:1;
+}
+
+.slider::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  appearance:none;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background:#4CAF50;
+  cursor:pointer;
+}
+
+.slider::-moz-range-thumb{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background:#4CAF50;
+  cursor:pointer;
+}
+
+p#demo{
+  margin-top:20px;
+}
+
+button#valider.btn.btn-primary{
+  margin:20px;
+}
+
+textarea#comment.form-control{
+}
+
+input#comment.form-control{
+  border-radius:20px;
+}
+
+.label-mamo{
+  border:solid 0.5px gray;
+  border-radius:5px;
+  position:relative;
+}
+
+.img-user{
+  position:absolute;
+  top:5px;
+}
+
+.img-user-d{
+  border-radius:100%;
+  width:50px;
+  height:50px;
+}
+
+p.nom{
+  float:right;
+  margin-top:20px;
+  margin-left:20px;
+}
+
+p.label-result{
+  text-align:left;
+  margin-top:50px;
+}
+
+.icone-yeux{
+  float:right;
+  font-size:30px;
+  color:rgb(48,48,125);
+  margin-right:30px;
+}
+
+.delete{
+  float:right;
+  font-size:30px;
+  color:rgb(213,45,45);
+}
+
+p.id-label{
+}
+
+.label-row{
+  margin-bottom:20px;
+}
+
+i#not.fa.fa-bell{
+  font-size:25px;
+}
+
+img#img-user{
+  border-radius:100%;
+}
+
+input#myRange.slider.blocked{
+  cursor:auto;
+}
+
+div.row.infor-row{
+  margin:20px;
+}
+
+.input-info{
+  width:100%;
+  padding:12px 20px;
+  margin:8px 0px;
+  display:inline-block;
+  border:solid 2px rgb(105,152,237);
+  box-sizing:border-box;
+  border-radius:0%;
+  height:50px;
+}
+
+div#photo-profile-d4{
+  margin:50px;
+  border:solid 0.5px gray;
+  border-radius:20px;
+}
+
+img#img-profile-d4{
+  margin:20px;
+}
+

@@ -1,0 +1,174 @@
+{% extends 'aidecan/baseindex.html' %}
+
+{% block suit %}
+    {% load static %}
+
+
+    <div id="first">
+        <div class="jumbotron">
+            <h1>Ensemble </h1>
+            <p>améliorons le dépistage du cancer du sein </p><a class="btn btn-info" role="button" href="#info" id="learn">Plus d'information</a>
+            <button class="btn btn-default" onclick="showLogin()" type="button">Commencer </button>
+        </div>
+    </div>
+    <div class="container" id="info">
+        <h1><strong>Plus d'informations</strong></h1>
+        <p>L’objectif de ce projet est double: la création un outil d’aide au diagnostic du cancer du sein et le développement d’une plateforme pour l’acquisitionde données et la construction d’un data-set. </p>
+        <hr>
+        <div class="row" id="pr">
+            <div class="col-md-4"><i class="fa fa-heart"></i>
+                <h1>Votre aide</h1>
+                <p>Votre aide nous inclut la collecte de nombreuses informations sur de nombreux cas pour éliminer le cancer du sein. </p>
+            </div>
+            <div class="col-md-4"><i class="glyphicon glyphicon-wrench"></i>
+                <h1>Notre travialle</h1>
+                <p>Après avoir pris vos paramètres, nous pouvons commencer notre travail en formant des ordinateurs pour qu’ils travaillent sur ces paramètres afin. d’éliminer le cancer. </p>
+            </div>
+            <div class="col-md-4"><i class="fa fa-thumbs-o-up"></i>
+                <h1>Une vie meilleure </h1>
+                <p>Après tout, savoir que le cancer du sein sera plus facile et plus efficace à éradiquer et que notre vie sera meilleure. </p>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div id="med" class="container-fluid">
+        <h1>Nos medecin</h1>
+        <div class="row">
+            <div class="col-md-3 card"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="med-img">
+                <hr>
+                <h4 class="med-h">Zekri Hicham</h4>
+                <p class="med-p">un medcin specialiste en radiographie chez hopitale de sidi bel abe </p>
+            </div>
+            <div class="col-md-3 card"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="med-img">
+                <hr>
+                <h4 class="med-h">Zekri Hicham</h4>
+                <p class="med-p">un medcin specialiste en radiographie chez hopitale de sidi bel abe </p>
+            </div>
+            <div class="col-md-3 card"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="med-img">
+                <hr>
+                <h4 class="med-h">Zekri Hicham</h4>
+                <p class="med-p">un medcin specialiste en radiographie chez hopitale de sidi bel abe </p>
+            </div>
+            <div class="col-md-3 card"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="med-img">
+                <hr>
+                <h4 class="med-h">Zekri Hicham</h4>
+                <p class="med-p">un medcin specialiste en radiographie chez hopitale de sidi bel abe </p>
+            </div>
+            <div class="col-md-3 card"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="med-img">
+                <hr>
+                <h4 class="med-h">Zekri Hicham</h4>
+                <p class="med-p">un medcin specialiste en radiographie chez hopitale de sidi bel abe </p>
+            </div>
+            <div class="col-md-3 card"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="med-img">
+                <hr>
+                <h4 class="med-h">Zekri Hicham</h4>
+                <p class="med-p">un medcin specialiste en radiographie chez hopitale de sidi bel abe </p>
+            </div>
+            <div class="col-md-3 card"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="med-img">
+                <hr>
+                <h4 class="med-h">Zekri Hicham</h4>
+                <p class="med-p">un medcin specialiste en radiographie chez hopitale de sidi bel abe </p>
+            </div>
+            <div class="col-md-3 card"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="med-img">
+                <hr>
+                <h4 class="med-h">Zekri Hicham</h4>
+                <p class="med-p">un medcin specialiste en radiographie chez hopitale de sidi bel abe </p>
+            </div>
+        </div>
+    </div>
+
+    <section id="signup" class="sign modal">
+
+        <span onclick="hideSignup()" class="close" title="Close Modal">&times;</span>
+
+     <form class="modal-content animate" action="{% url 'first_page' %}" method="post">
+    {% csrf_token %}
+
+            <div class="container2">
+                <h1>Inscrivez-vous et commencez à nos aidé </h1>
+                <hr>
+                <br>
+                 {% for field in form %}
+                  <p>
+                    {{ field }}
+                    {% if field.help_text %}
+                      <br>
+                        <small style="color: grey" >{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                      <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+
+                 {% endfor %}
+              {% for field in form2 %}
+
+                    {{ field }}
+                    {% if field.help_text %}
+                      <br>
+                        <small style="color: grey" >{{ field.help_text }}</small>
+                    {% endif %}
+                    {% for error in field.errors %}
+                      <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                  </p>
+                 {% endfor %}
+                <button type="submit">S'inscrire</button>
+                <p>En vous inscrivant, vous acceptez nos <a href="#">conditions générales d'utilisation</a> et notre <a href="#">politique de confidentialité</a>. </p>
+           <button type="button" onclick="hideSignup()" class="cancelbtn">Cancel</button>
+                <span class="psw">Vous avez déjà un compte ? <a href="#" onclick="showLogin();hideSignup();">Se connecter</a></span>
+
+
+
+            </div>
+
+            <div class="container2" style="background-color:#f1f1f1">
+                <br>
+                <span class="psw">Vous avez déjà un compte ? <a href="#" onclick="showLogin();hideSignup();">Se connecter</a></span>
+            </div>
+        </form>
+
+    </section>
+
+    <!-- TODO : Adding categories side nav -->
+    <section id="signin" class="sign modal1" >
+
+        <span onclick="hideLogin()" class="close" title="Close Modal">&times;</span>
+
+        <!-- Modal Content -->
+         <form class="modal-content animate" action="{% url 'first_page' %}" method="post">
+    {% csrf_token %}
+ {% load widget_tweaks %}
+            <div class="container2">
+                <h1>Connectez-vous à votre compte AideCan</h1>
+                <hr>
+                <br>
+                  <p>
+                        {% render_field form1.username placeholder="Nom d utlisateur" %}
+
+                    {% for error in field.errors %}
+                      <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                  </p>
+
+             <p>
+                        {% render_field form1.password placeholder="mot de passe" %}
+
+
+                    {% for error in field.errors %}
+                      <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                  </p>
+                <button type="submit">Se connecter</button>
+
+            </div>
+
+            <div class="container2" style="background-color:#f1f1f1">
+                <button type="button" onclick="hideLogin()" class="cancelbtn">Cancel</button>
+                <span class="psw"><a href="#" onclick="showSignup();hideLogin();">Vous n'avez pas de compte ?</a> | <a href="{% url 'password_reset' %}">Vous avez oublié votre mot de passe ?</a></span>
+            </div>
+        </form>
+    </section>
+
+
+
+{% endblock %}

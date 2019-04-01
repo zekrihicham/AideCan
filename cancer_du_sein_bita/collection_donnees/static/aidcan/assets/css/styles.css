@@ -1,0 +1,312 @@
+.navbar{
+  position:relative;
+  min-height:50px;
+  margin-bottom:0;
+  border:1px solid transparent;
+}
+
+.item-menu{
+  width:100%;
+  height:100%;
+  text-align:center;
+}
+
+.a{
+  background-color:#fff;
+  height:75px;
+}
+
+#pr{
+  z-index:-1;
+}
+
+p.item{
+  margin-top:25px;
+  width:100%;
+  height:50px;
+}
+
+p#data-set.item{
+  margin-left:25%;
+  width:50%;
+}
+
+p#apropos.item{
+  width:50%;
+  margin-left:25%;
+}
+
+#menu{
+  margin-top:50px;
+  background-color:#fff;
+  z-index:1;
+}
+
+div#first{
+  padding:80px;
+  margin-top:85px;
+  text-align:center;
+  background-image:inherit;
+  background-image:url(../../assets/img/cc.png);
+  background-size:cover;
+  height:600px;
+}
+a{
+
+  color: black;
+}
+div.jumbotron{
+  border-radius:20px;
+  padding:40px;
+  background-color:rgba(255,255,255,0.75);
+  max-width:800px;
+  margin:auto;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top{
+  position:fixed;
+}
+
+@media (max-width:991px) {
+  .a{
+    display:none;
+  }
+}
+
+div#logo.col-md-3{
+  background-color:#fff;
+}
+
+button#burger.btn.btn-default{
+  display:none;
+}
+
+@media (max-width:991px) {
+  button#burger.btn.btn-default{
+    display:inline-block;
+    position:absolute;
+    right:20px;
+    font-size:20px;
+    top:20px;
+    border-radius:5px;
+  }
+}
+
+div#info.container{
+  text-align:center;
+  font-size:24px;
+}
+
+@media (min-width:991px) {
+  .a{
+    display:inline-block;
+  }
+}
+
+i.fa.fa-heart{
+  font-size:50px;
+}
+
+i.glyphicon.glyphicon-wrench{
+  font-size:50px;
+}
+
+i.fa.fa-thumbs-o-up{
+  font-size:50px;
+}
+
+div#pr.row{
+  margin-top:100px;
+}
+
+a#rigester{
+  background-color:rgb(112,214,91);
+  color:#fff;
+  font-size:24px;
+}
+
+a#login{
+  background-color:rgb(210,5,104);
+  color:#fff;
+}
+
+div.container{
+  text-align:center;
+}
+
+#med{
+  text-align:center;
+  background-color:#e7e7e7;
+}
+
+div.col-md-3.card{
+  box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+  width:240px;
+  margin:40px;
+  background-color:#fff;
+  text-align:center;
+  position:initial;
+  transition:0.3s;
+}
+
+img.med-img{
+  border-radius:100%;
+  margin-top:20px;
+}
+
+h4.med-h{
+  color:rgb(112,215,91);
+}
+
+p.med-p{
+  color:gray;
+}
+
+div.col-md-3.card:hover{
+  box-shadow:0 20px 28px 0 rgba(0,0,0,0.2);
+}
+
+#learn{
+  border-radius:0%;
+  margin-right:10px;
+  color:#fefffe;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+.modal{
+  display:none;
+  position:fixed;
+  z-index:1;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgb(0, 0, 0);
+  background-color:rgba(0, 0, 0, 0.8);
+  padding-top:0px;
+}
+
+.modal1{
+  display:none;
+  position:fixed;
+  z-index:1;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgb(0, 0, 0);
+  background-color:rgba(0, 0, 0, 0.8);
+  padding-top:60px;
+}
+
+.modal-content{
+  background-color:#fefefe;
+  margin:auto;
+  border:1px solid #888;
+  width:60%;
+  border-radius:0;
+}
+
+.close{
+  position:absolute;
+  right:25px;
+  top:30px;
+  color:#000;
+  font-size:35px;
+  font-weight:bold;
+}
+
+.close:hover, .close:focus{
+  color:red;
+  cursor:pointer;
+}
+
+.animate{
+  -webkit-animation:animatezoom 0.6s;
+  animation:animatezoom 0.6s;
+}
+
+#signin, #signup{
+  z-index:50;
+  background-color:rgba(0, 0, 0, 0.8);
+  margin-top:50px;
+}
+
+#signin form, #signup form{
+  border:1px solid white;
+}
+
+#signup input, #signin input{
+  width:100%;
+  padding:12px 20px;
+  margin:8px 0;
+  display:inline-block;
+  border:1px solid cornflowerblue;
+  box-sizing:border-box;
+}
+
+#signin button, #signup button{
+  background-color:cornflowerblue;
+  color:white;
+  padding:14px 20px;
+  margin:8px 0;
+  border:none;
+  cursor:pointer;
+  width:100%;
+}
+
+#signin button:hover, #signup button:hover{
+  opacity:0.8;
+}
+
+#signin form h1, #signup form h1{
+  font-size:1.5em;
+}
+
+#signin .cancelbtn, #signup .cancelbtn{
+  width:auto;
+  padding:10px 18px;
+  background-color:#f44336;
+}
+
+#signin .close, #signup .close{
+  color:white;
+}
+
+#signin .container, #signup .container{
+  padding:16px;
+  text-align:center;
+}
+
+#signin .container hr, #signup .container hr{
+  color:cornflowerblue;
+  width:100px;
+}
+
+#signin .container2, #signup .container2{
+  padding:5px;
+}
+
+span.psw{
+  float:right;
+  padding-top:16px;
+}
+
+@media screen and (max-width: 300px) {
+  span.psw{
+    display:block;
+    float:none;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .cancelbtn{
+    width:100%;
+  }
+}
+

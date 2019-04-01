@@ -1,0 +1,29 @@
+input.rest-input{
+  width:50%;
+  height:50px;
+  margin:50px;
+  padding:10px;
+  font-size:20px;
+}
+
+h4#h-rest-2{
+  text-align:left;
+  color:gray;
+  margin:50px;
+}
+
+.password_reset_input input{
+  width:50%;
+  margin:25px;
+  height:40px;
+}
+
+a.btn.btn-link{
+  border:solid 0.5px;
+  margin:50px;
+}
+
+button#changeP.btn.btn-link.btn-lg{
+  border:solid 0.5px;
+}
+

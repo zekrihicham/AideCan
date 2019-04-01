@@ -1,0 +1,61 @@
+{% extends 'aidecan/base.html' %}
+
+
+{% block content %}
+    {% load static %}
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-link" href="#"> </a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="active" role="presentation"><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                    <li role="presentation"><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                    <li role="presentation"><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li role="presentation">
+                        <a href="#"> <i class="fa fa-linkedin-square"></i></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li role="presentation"><a href="#"><i class="fa fa-bell" id="not"></i> </a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#"> <img src="{% static 'aidcan/assets/img/avatar.jpg' %}" width="25px" id="img-user"><span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a href="{% url 'profile' user.id %}">Mon profile</a></li>
+                            <li role="presentation"><a href="{% url 'first_page' %}">Accueil</a></li>
+                            <li role="presentation"><a href="{% url 'logout' %}">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="menu" class="cntainer-fluid navbar-fixed-top">
+        <div class="row" id="toggled">
+            <div class="col-md-3" id="logo"><img src="{% static 'aidcan/assets/img/ENkdkF89.png' %}" width="200" height="75">
+                <button class="btn btn-default" type="button" id="burger"><i class="glyphicon glyphicon-tasks"></i></button>
+            </div>
+            <div class="col-md-3 a">
+                <div class="item-menu">
+                   <a href="{% url 'label_view' id %}"> <p id="infor" class="item"><strong>Labelliser des cas&nbsp;</strong> </p></a>
+                </div>
+            </div>
+            <div class="col-md-3 a">
+                <div class="item-menu">
+                    <a href="{% url 'add_mammo_and_label_view' id %}"> <p id="apropos" class="item"><strong>A</strong>jouter un cas</p></a>
+                </div>
+            </div>
+            <div class="col-md-3 a">
+                <div class="item-menu">
+                    <a href="data.csv"> <p id="data-set" class="item"><strong>DATA-SET</strong> </p></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        {% block suit %}
+            {% endblock %}
+{% endblock %}

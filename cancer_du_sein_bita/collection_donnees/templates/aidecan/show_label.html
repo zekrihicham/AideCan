@@ -1,0 +1,99 @@
+{% extends 'aidecan/basedash.html' %}
+
+{% block suit %}
+
+  {% load static %}
+    <div class="container" id="mamo">
+        <div class="row">
+            <div class="col-md-12" id="mamo-col">
+                <div id="mamo-img"><img src="{% static 'aidcan/assets/img/mamo.jpg' %}" width="500px" height="500px"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>malin </p>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="range" id="myRange" class="slider blocked" max="100" min="0" value="75" disabled="">
+                            <p id="demo">valuer: <span id="show"> </span><span>% </span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>bénin </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="div-comment">
+                            <input class="form-control" type="text" id="comment" placeholder="Commentaire" value="this is a comment" disabled="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+    </div>
+  {% endblock %}

@@ -1,0 +1,46 @@
+div#file.col-md-4{
+  margin-top:20px;
+  margin-bottom:50px;
+}
+
+button#valider-d2.btn.btn-primary{
+  margin-top:20px;
+  width:50%;
+}
+
+img.img-mamo-d2{
+  margin:10px;
+}
+
+div.col-md-12.label-memo{
+  border:solid 0.5px gray;
+  border-radius:20px;
+}
+
+p.label-mamo-d2{
+  margin:20px;
+  margin-bottom:100px;
+}
+
+p.date{
+  margin-top:200px;
+  text-align:right;
+}
+
+@media (max-width:991px) {
+  p.label-mamo-d2{
+    margin-bottom:20px;
+  }
+}
+
+@media (max-width:991px) {
+  p.date{
+    margin-top:0px;
+    float:left;
+  }
+}
+
+div.row.label-row{
+  margin-bottom:20px;
+}
+

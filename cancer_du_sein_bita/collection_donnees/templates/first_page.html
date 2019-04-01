@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form class="modal-content animate" action="{% url 'first_page' %}" method="post">
+    {% csrf_token %}
+ {% load widget_tweaks %}
+            <div class="container2">
+                <h1>Connectez-vous à votre compte AideCan</h1>
+                <hr>
+                <br>
+                  <p>
+                        {% render_field form1.username placeholder="Nom d utlisateur" %}
+
+                    {% for error in field.errors %}
+                      <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                  </p>
+
+             <p>
+                        {% render_field form1.password placeholder="mot de passe" %}
+
+
+                    {% for error in field.errors %}
+                      <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                  </p>
+                <button type="submit">Se connecter</button>
+
+            </div>
+
+            <div class="container2" style="background-color:#f1f1f1">
+                <button type="button" onclick="hideLogin()" class="cancelbtn">Cancel</button>
+                <span class="psw"><a href="#" onclick="showSignup();hideLogin();">Vous n'avez pas de compte ?</a> | <a href="#">Vous avez oublié votre mot de passe ?</a></span>
+            </div>
+        </form>
+
+
+
+</body>
+</html>

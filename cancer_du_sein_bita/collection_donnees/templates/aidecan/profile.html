@@ -1,0 +1,69 @@
+{% extends 'aidecan/basedash.html' %}
+{% block suit %}
+    {% load static %}
+    <div class="container" id="mamo">
+        <div class="row">
+                            <form method="post" action="{% url 'profile' id %}" enctype="multipart/form-data">
+
+            <div class="col-md-6">
+                    {% csrf_token %}
+                    <div class="row infor-row">
+                        <div class="col-md-6">
+                            <input  class="form-control input-info" id="first_name" name="first_name" value="{{ doc.user.first_name }}" type="text"  readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control input-info" name="last_name" id="last_name" value="{{ doc.user.last_name }}"  type="text"  readonly>
+                        </div>
+                    </div>
+                    <div class="row infor-row">
+                        <div class="col-md-12">
+                            <input class="form-control input-info" name="email" id="email" value="{{ doc.user.email }}" type="email" readonly>
+                        </div>
+                    </div>
+                    <div class="row infor-row">
+                        <div class="col-md-6">
+                            <input class="form-control input-info" id="speciality" name="speciality" value="{{ doc.specialty }}" type="text"  readonly>
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control input-info" name="establishment" id="establishment" value="{{ doc.establishment }}" type="text" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a class="btn btn-success" id="modifier-btn" onclick="modifier()" type="button">Modifier </a>
+                            <button class="btn btn-success" id="modifier-btn1" type="submit" style="display: none">Valider </button>
+                        </div>
+                    </div>
+                    <hr>
+            </div>
+            <div class="col-md-6">
+                <div id="photo-profile-d4"><img src="{{ doc.photo.url }}"  width="250px" id="img-profile-d4">
+                        <input type="file"  name="img" id="img" style="display:none;" >
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <a class="btn btn-link btn-lg"  href="{% url 'change_password' id%}"  type="button" id="changeP">Modifier mot de passe</a>
+                    </div>
+                </div>
+            </div></form>
+        </div>
+    </div>
+    <script>
+        function modifier() {
+
+        document.getElementById('first_name').removeAttribute("readonly");
+        document.getElementById('last_name').removeAttribute("readonly");
+        document.getElementById('email').removeAttribute("readonly");
+        document.getElementById('speciality').removeAttribute("readonly");
+        document.getElementById('establishment').removeAttribute("readonly");
+        document.getElementById('modifier-btn').style.display="none";
+        document.getElementById('modifier-btn1').style.display="block";
+        document.getElementById('img').style.display="block";
+
+
+        }
+
+    </script>
+
+{% endblock %}

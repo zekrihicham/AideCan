@@ -1,0 +1,170 @@
+{% extends 'aidecan/basedash.html' %}
+
+{% block suit %}
+ <style>
+        #infor{
+            color: green;
+            border-bottom: solid 2px;
+        }
+    </style>
+{% load static %}
+    <div class="container" id="mamo">
+        <div class="row">
+            {% for mamo in list %}
+            <div id="{{ mamo.id }}" class="col-md-12 mamo-col" >
+                <div class="mamo-img" ><img src="{% static 'aidcan/assets/img/mamo.jpg' %}" width="500px" height="500px"></div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                                    <div class="row">
+                        <div class="col-md-4">
+                            <p>malin </p>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="range" id="myRange" class="slider" max="100" min="0" value="50">
+                            <p id="demo">valuer: <span id="show"> </span><span>% </span></p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>bénin </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12" id="div-comment">
+                            <input class="form-control" type="text" id="comment" placeholder="Commentaire">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <button class="btn btn-primary" onclick="submit()" type="button" id="valider">Valider </button>
+                            <button class="btn btn-link"  type="button" id="skip">Skip </button>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i>  <a href="show_label.html"> <i class="glyphicon glyphicon-eye-open icone-yeux"></i></a> </p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row label-row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 label-mamo">
+                <div class="img-user"><img src="{% static 'aidcan/assets/img/avatar.jpg' %}" class="img-user-d">
+                    <p class="nom"><strong>zekri Hicham</strong></p>
+                </div>
+                <p class="id-label">445 <i class="glyphicon glyphicon-remove delete"></i><i class="glyphicon glyphicon-eye-open icone-yeux"></i></p>
+                <p class="label-result">ce cas et bénin de 75 % </p>
+                <p>ce si est un commentaire pour le ca 445</p>
+            </div>
+        </div>
+    </div>
+    <div id ='csrf'>
+
+     {% csrf_token %}
+
+    </div>
+
+    <script src="{% static 'aidcan/assets/js/jquery.min.js' %}"></script>
+
+    <script>
+
+    var list=new Array();
+    var i =0 ;
+    {% for mammo in list %}
+    list.push({{ mammo.id }});
+    {% endfor %}
+    $("#"+list[0]).css("display","block");
+
+    function submit() {
+        var token=0;
+  $('#csrf input').each(function (index) {
+           token= this.value;
+
+        });
+
+        var id_mamo=list[i];
+        var id_user={{ doc.id }};
+        var rate=document.getElementById('myRange').value;
+        var comment=document.getElementById('comment').value;
+
+            data= {
+            'id_mamo':id_mamo,
+            'id_user':id_user,
+            'rate':rate,
+            'comment':comment,
+            'csrfmiddlewaretoken':token,
+            }
+             $.ajax({
+        type:"POST",
+        url: '{% url 'valid' id %}',
+        data: data,
+        dataType: 'json',
+        success: function (data) {
+            console.log("yes");
+        }
+      });
+
+        $("#"+list[i] ).slideUp();
+
+
+         document.getElementById("myRange").value=50;
+         document.getElementById("comment").value="";
+
+         i++;
+
+        $("#"+list[i]).slideDown();
+    }
+
+    </script>
+{% endblock %}
